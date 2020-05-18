@@ -1,0 +1,14 @@
+From python:3.8
+Label MAINTAINER="Farshad"
+
+ENV PYTHONUNBUFFERED 1
+
+RUN mkdir /hms_admin_panel
+WORKDIR /hms_admin_panel
+COPY . /hms_admin_panel
+
+ADD requirements.txt /hms_admin_panel
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+
