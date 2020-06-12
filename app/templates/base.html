@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <title>{% block title %}{% endblock %} - DATACODE</title>
+
+    <!-- Favicon-->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{ url_for('static', filename='plugins/node-waves/waves.css') }}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{ url_for('static', filename='plugins/animate-css/animate.css') }}" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="{{ url_for('static', filename='plugins/morrisjs/morris.css') }}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{ url_for('static', filename='css/themes/all-themes.css') }}" rel="stylesheet" />
+  </head>
+  <body class="{% block body %}{% endblock %}">
+
+    {% include 'navbar.html' %}
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% block content %}
+    {% endblock content %}
+    {% include 'footer.html' %}
+
+    <!-- Jquery Core Js -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.js') }}"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/node-waves/waves.js') }}"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/jquery-validation/jquery.validate.js') }}"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/jquery-countto/jquery.countTo.js') }}"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/raphael/raphael.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/morrisjs/morris.js') }}"></script>
+
+    <!-- ChartJs -->
+    <script src="{{ url_for('static', filename='plugins/morrisjs/morris.js') }}"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/flot-charts/jquery.flot.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/flot-charts/jquery.flot.resize.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/flot-charts/jquery.flot.pie.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/flot-charts/jquery.flot.categories.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/flot-charts/jquery.flot.time.js') }}"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="{{ url_for('static', filename='plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
+
+    <!-- Custom Js -->
+        <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pages/examples/sign-in.js') }}"></script>
+
+    <!-- Demo Js -->
+    <script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+  </body>
+</html>

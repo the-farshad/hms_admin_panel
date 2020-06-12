@@ -1,14 +1,7 @@
-From python:3.8
-Label MAINTAINER="Farshad"
+FROM tiangolo/uwsgi-nginx-flask:python3.8
 
-ENV PYTHONUNBUFFERED 1
-
-RUN mkdir /hms_admin_panel
-WORKDIR /hms_admin_panel
-COPY . /hms_admin_panel
-
-ADD requirements.txt /hms_admin_panel
+COPY ./requirements.txt /var/www/requirements.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r /var/www/requirements.txt
 
-
+COPY ./app /app
