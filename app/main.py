@@ -28,7 +28,7 @@ app = Flask(__name__)
 limiter = Limiter(
     app,
     key_func=get_remote_address,
-    default_limits=["50 per day", "10 per hour"]
+    default_limits=["500 per day", "100 per hour"]
 )
 
 UPLOAD_FOLDER = config.UPLOAD_FOLDER
@@ -70,7 +70,7 @@ users = [User(id) for id in range(1, 21)]
 
 # somewhere to login
 @app.route("/login", methods=["GET", "POST"])
-@limiter.limit("6 per minute")
+@limiter.limit("15 per minute")
 def login():
     if current_user.is_authenticated:
         return redirect('/')
