@@ -20,7 +20,7 @@ Admin panel of HMS based on Flask
 Contributions are  **welcome**  and will be fully  **credited**. I'd be happy to accept PRs for template extending.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/the-farshad/coronaVirus/blob/master/LICENSE) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/the-farshad/hms_admin_panel/blob/master/LICENSE) file for details
 
 > ###### Good Luck!
 > May the force be with you
